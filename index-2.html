@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dunia Produk Digital - Panduan Lengkap Pemula</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ff6b6b;
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(255,107,107,0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255,107,107,0.4);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        /* Apa itu Produk Digital */
+        .digital-products {
+            background: #f8f9fa;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .product-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            height: 100%;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+        }
+
+        .product-icon {
+            font-size: 4rem;
+            color: #667eea;
+            margin-bottom: 1.5rem;
+        }
+
+        .product-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #2c3e50;
+        }
+
+        /* Langkah-langkah */
+        .steps {
+            background: white;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: #ff6b6b;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease forwards;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-rocket"></i>
+                <span>DigitalPro</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Produk Digital</a></li>
+                <li><a href="#steps">Langkah Awal</a></li>
+                <li><a href="#cta">Mulai Sekarang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="fade-in-up">Selamat Datang di<br><strong>Dunia Produk Digital</strong></h1>
+            <p class="fade-in-up">Buat sekali, jual berkali-kali. Pelajari pengertian dan langkah awal untuk memulai bisnis produk digital yang menguntungkan!</p>
+            <a href="#products" class="cta-button fade-in-up">🚀 Mulai Belajar</a>
+        </div>
+    </section>
+
+    <!-- Produk Digital Section -->
+    <section id="products" class="digital-products">
+        <div class="container">
+            <h2 class="section-title">Apa Itu Produk Digital?</h2>
+            <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Produk digital adalah barang tidak berwujud yang dibuat secara digital dan dapat diunduh atau diakses secara online. 
+                Keuntungannya? Buat sekali, jual selamanya!
+            </p>
+            
+            <div class="product-grid">
+                <div class="product-card" onclick="openModal('ebook')">
+                    <div class="product-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <h3>Ebook</h3>
+                    <p>Buku digital dalam format PDF yang bisa dijual berulang kali tanpa biaya produksi tambahan.</p>
+                </div>
+                
+                <div class="product-card" onclick="openModal('course')">
+                    <div class="product-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Online Course</h3>
+                    <p>Kursus video yang mengajarkan skill tertentu dengan harga premium.</p>
+                </div>
+                
+                <div class="product-card" onclick="openModal('template')">
+                    <div class="product-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Template</h3>
+                    <p>Template website, presentasi, CV, atau desain siap pakai.</p>
+                </div>
+                
+                <div class="product-card" onclick="openModal('stock')">
+                    <div class="product-icon">
+                        <i class="fas fa-images"></i>
+                    </div>
+                    <h3>Stock Photos/Graphics</h3>
+                    <p>Foto, ilustrasi, atau grafik berkualitas tinggi untuk desain.</p>
+                </div>
+                
+                <div class="product-card" onclick="openModal('software')">
+                    <div class="product-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Software/Tools</h3>
+                    <p>Aplikasi, plugin, atau tools yang menyelesaikan masalah spesifik.</p>
+                </div>
+                
+                <div class="product-card" onclick="openModal('music')">
+                    <div class="product-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <h3>Musik & Audio</h3>
+                    <p>Sound effect, musik latar, atau voice over profesional.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Langkah Awal Section -->
+    <section id="steps" class="steps">
+        <div class="container">
+            <h2 class="section-title">7 Langkah Awal Terjun ke Dunia Produk Digital</h2>
+            
+            <div class="steps-grid">
+                <div class="step-card fade-in-up">
+                    <div class="step-number">1</div>
+                    <h3>Pilih Niche</h3>
+                    <p>Temukan passion + market demand. Pilih topik yang kamu kuasai DAN dicari orang.</p>
+                </div>
+                
+                <div class="step-card fade-in-up">
+                    <div class="step-number">2</div>
+                    <h3>Riset Kompetitor</h3>
+                    <p>Lihat apa yang sudah ada di Etsy, Gumroad, atau marketplace lain. Temukan celah pasar.</p>
+                </div>
+                
+                <div class="step-card fade-in-up">
+                    <div class="step-number">3</div>
+                    <h3>Buat MVP</h3>
+                    <p>Minimum Viable Product. Buat versi sederhana dulu, test pasar, baru improve.</p>
+                </div>
+                
+                <div class="step-card fade-in-up">
+                    <div class="step-number">4</div>
+                    <h3>Pilih Platform</h3>
+                    <p>Etsy, Gumroad, Sellfy, atau website sendiri. Pilih yang cocok budget & target market.</p>
+                </div>
+                
+                <div class="step-card fade-in-up">
+                    <div class="step-number">5</div>
+                    <h3>Optimasi Listing</h3>
+                    <p>Judul menarik, deskripsi lengkap, foto profesional, keyword SEO yang tepat.</p>
+                </div>
+                
+                <div class="step-card fade-in-up">
+                    <div class="step-number">6</div>
+                    <h3>Promosi</h3>
+                    <p>Social media, Pinterest, email list, kolaborasi. Mulai gratis dulu!</p>
+                </div>
+                
+                <div class="step-card fade-in-up">
+                    <div class="step-number">7</div>
+                    <h3>Scale Up</h3>
+                    <p>Analisa penjualan, buat produk baru, automate proses, hire help jika perlu.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="cta" class="cta-section">
+        <div class="container">
+            <h2>Siap Memulai?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">Daftar newsletter gratis untuk dapatkan roadmap lengkap + tools rekomendasi!</p>
+            <div style="max-width: 500px; margin: 0 auto;">
+                <input type="email" placeholder="Masukkan email kamu" style="width: 70%; padding: 15px; border: none; border-radius: 50px 0 0 50px; font-size: 1rem;">
+                <button class="cta-button" style="width: 28%; border-radius: 0 50px 50px 0; margin-left: -5px;">Daftar Gratis</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 DigitalPro. Semua hak dilindungi. | Buat Produk Digital, Hidup Lebih Mudah 🚀</p>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Modal functionality
+        function openModal(productType) {
+            const modal = document.getElementById('productModal');
+            const modalBody = document.getElementById('modalBody');
+            
+            const products = {
+                ebook: {
+                    title: "📚 Ebook Digital",
+                    content: `
+                        <h2 style="color: #667eea; margin-bottom: 1rem;">Ebook - Produk Digital Paling Populer</h2>
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin: 1rem 0;">
+                            <h3>💰 Potensi Penghasilan</h3>
+                            <p><strong>Rp50.000 - Rp500.000</strong> per penjualan</p>
+                        </div>
+                        <ul style="line-height: 2;">
+                            <li><i class="fas fa-check" style="color: #27ae60;"></i> Buat sekali dengan Canva/Google Docs</li>
+                            <li><i class="fas fa-check" style="color: #27ae60;"></i> Format PDF, mudah didistribusikan</li>
+                            <li><i class="fas fa-check" style="color: #27ae60;"></i> Topik populer: resep masak, parenting, bisnis</li>
+                            <li><i class="fas fa-check" style="color: #27ae60;"></i> Tools: Canva Pro (Rp100rb/bln), Google Docs (gratis)</li>
+                        </ul>
+                        <div style="margin-top: 2rem;">
+                            <a href="#" class="cta-button" style="background: #667eea;">Lihat Contoh Ebook 💡</a>
+                        </div>
+                    `
+                },
+                course: {
+                    title: "🎓 Online Course",
+                    content: `
+                        <h2 style="color: #667eea; margin-bottom: 1rem;">Online Course - Penghasilan Premium</h2>
+                        <div style="background: #f8f9fa; padding: 1.5rem; border-radius:
